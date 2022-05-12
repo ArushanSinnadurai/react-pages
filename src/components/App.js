@@ -11,8 +11,7 @@ function App() {
         <Navbar />
         <div className="Homepage">
           <Routes>
-            <Route exact path="/" element={<Homepage/>}/>
-            <Route exact path="/About" element={<Aboutme/>}/>
+            <Route exact path="/react-pages" element={<Homepage/>}/>
           </Routes>
         </div>
       </div>
