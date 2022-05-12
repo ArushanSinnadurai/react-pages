@@ -12,17 +12,17 @@ const Homepage = () => {
                 <ul class="links">
                     <li>
                         <a href="https://www.linkedin.com/in/arushan-sinnadurai/" target="_blank" rel="noopener noreferrer" title="https://www.linkedin.com/in/arushan-sinnadurai/">
-                            <img src={Linkedinlogo} width="80" height="80" />
+                            <img src={Linkedinlogo} alt="logo" width="80" height="80" />
                         </a>
                     </li>
                     <li >
                         <a href= "https://github.com/ArushanSinnadurai" target="_blank" rel="noopener noreferrer" title="https://github.com/ArushanSinnadurai">
-                            <img src={Githublogo} width="80" height="80"/>
+                            <img src={Githublogo} alt="logo" width="80" height="80"/>
                         </a>
                     </li>
                     <li>
                         <a href={resume} title="Resume">
-                            <img src={resumelogo} width="80" target="_blank" rel="noopener noreferrer" height="80"/>
+                            <img src={resumelogo} alt="logo" width="80" target="_blank" rel="noopener noreferrer" height="80"/>
                         </a> 
                     </li>
                 </ul>
