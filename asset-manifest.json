@@ -1,18 +1,18 @@
 {
   "files": {
     "main.css": "/react-pages/static/css/main.e7df48e7.css",
-    "main.js": "/react-pages/static/js/main.75ade357.js",
-    "static/media/Arushan Sinnadurai resume 2022.pdf": "/react-pages/static/media/Arushan Sinnadurai resume 2022.100f38485a2255216586.pdf",
+    "main.js": "/react-pages/static/js/main.7b906726.js",
+    "static/media/Arushan Sinnadurai resume.pdf": "/react-pages/static/media/Arushan Sinnadurai resume.fc95c40626981a4589cc.pdf",
     "static/media/profilepic.jpg": "/react-pages/static/media/profilepic.852836b2bf62d142f7be.jpg",
     "static/media/GitHub-logo.svg": "/react-pages/static/media/GitHub-logo.9ef47c2fe053612bbd703bd38245b103.svg",
     "static/media/resume.svg": "/react-pages/static/media/resume.4bc252e7b55c0dde1dc13a5d53755b5e.svg",
     "static/media/linkedin-logo.svg": "/react-pages/static/media/linkedin-logo.d163c7edf8fcad84c389e1a731a811f5.svg",
     "index.html": "/react-pages/index.html",
     "main.e7df48e7.css.map": "/react-pages/static/css/main.e7df48e7.css.map",
-    "main.75ade357.js.map": "/react-pages/static/js/main.75ade357.js.map"
+    "main.7b906726.js.map": "/react-pages/static/js/main.7b906726.js.map"
   },
   "entrypoints": [
     "static/css/main.e7df48e7.css",
-    "static/js/main.75ade357.js"
+    "static/js/main.7b906726.js"
   ]
 }
