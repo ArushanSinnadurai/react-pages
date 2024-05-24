@@ -1,7 +1,7 @@
-import Navbar from './navbar/Navbar';
-import Homepage from './homepage/Homepage'
-import Aboutme from './aboutme/Aboutme'
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Navbar from "./navbar/Navbar";
+import Homepage from "./homepage/Homepage";
+import Aboutme from "./aboutme/Aboutme";
+import { HashRouter as Router, Route, Routes } from "react-router-dom";
 
 function App() {
   return (
@@ -10,8 +10,7 @@ function App() {
         <Navbar />
         <div className="Homepage">
           <Routes>
-            <Route exact path="/react-pages" element={<Homepage/>}/>
-            <Route exact path="/react-pages/about" element={<Aboutme/>}/>
+            <Route exact path="/react-pages" element={<Homepage />} />
           </Routes>
         </div>
       </div>
