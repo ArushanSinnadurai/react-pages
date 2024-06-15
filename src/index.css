@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 body {
     font-family: 'Assistant', san-serif;
     font-size: 24px;
@@ -57,26 +61,4 @@ ul.links {
 }
 ul.links li {
     padding: 10px 10px 0 10px;
-}
-
-.profilepicimage {
-    padding: 14px 16px;
-}
-.profilepicimage img {
-    position: absolute;
-    left: 50px;
-    top: 150px;
-    border-radius: 20%;
-}
-.p1txt {
-    position: absolute;
-    color: red;
-    left: 180px;
-    top: 100px; 
-}
-
-.aboutmetxt {
-    position: relative;
-    left: 1000px;
-    top: 100px; 
 }
