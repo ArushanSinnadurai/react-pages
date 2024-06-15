@@ -17,7 +17,7 @@ const Homepage = () => {
               rel="noopener noreferrer"
               title="https://www.linkedin.com/in/arushan-sinnadurai/"
             >
-              <img src={Linkedinlogo} alt="logo" width="80" height="80" />
+              <img src={Linkedinlogo} alt="logo" width="100" height="100" />
             </a>
           </li>
           <li>
@@ -27,7 +27,7 @@ const Homepage = () => {
               rel="noopener noreferrer"
               title="https://github.com/ArushanSinnadurai"
             >
-              <img src={Githublogo} alt="logo" width="80" height="80" />
+              <img src={Githublogo} alt="logo" width="100" height="100" />
             </a>
           </li>
           <li>
@@ -35,10 +35,10 @@ const Homepage = () => {
               <img
                 src={resumelogo}
                 alt="logo"
-                width="80"
+                width="100"
                 target="_blank"
                 rel="noopener noreferrer"
-                height="80"
+                height="100"
               />
             </a>
           </li>
