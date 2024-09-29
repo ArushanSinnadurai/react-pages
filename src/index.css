@@ -36,7 +36,6 @@ body {
 
 /* Add a color to the active/current link */
 .navbar li:active {
-  background-color: #04AA6D;
   color: white;
   list-style-type: none;
 }
