@@ -1,16 +1,14 @@
+import React from "react";
 import profilepic from "./profilepic.jpg";
-import Linkedinlogo from "../homepage/linkedin-logo.svg";
-import Githublogo from "../homepage/GitHub-logo.svg";
+import Linkedinlogo from "../HomePage/linkedin-logo.svg";
+import Githublogo from "../HomePage/GitHub-logo.svg";
 
-const About = () => {
+const AboutMe = () => {
   return (
     <div class="flex flex-col">
       <div class="flex flex-col md:flex-row">
-        <div class="w-full text-white">
-          <img src={profilepic} alt="profilepic" />
-        </div>
         <div class="w-full text-center py-4">
-          <div class="flex flex-col">
+          <div class="flex flex-col pt-32 pr-42">
             <div class="py-4 text-4xl font-normal text-gray-900 dark:text-black">
               <h1>Hello! My name is Arushan Sinnadurai</h1>
             </div>
@@ -25,15 +23,15 @@ const About = () => {
             </div>
           </div>
         </div>
-      </div>
-
-      <div class="flex mb-4">
-        <div class="w-1/2">
-          <p class="text-center">TO-DO - Add email form</p>
-        </div>
-        <div class="w-1/2">
-          <ul class="links">
-            <li>
+        <div class="w-full text-white pt-28 pl-32">
+          <img
+            src={profilepic}
+            alt="profilepic"
+            class="h-auto max-w-xl rounded-lg shadow-xl dark:shadow-gray-800
+            "
+          />
+          <div class="flex flex-row-reverse pt-6 pr-96">
+            <div>
               <a
                 href="https://www.linkedin.com/in/arushan-sinnadurai/"
                 target="_blank"
@@ -42,8 +40,8 @@ const About = () => {
               >
                 <img src={Linkedinlogo} alt="logo" width="100" height="100" />
               </a>
-            </li>
-            <li>
+            </div>
+            <div>
               <a
                 href="https://github.com/ArushanSinnadurai"
                 target="_blank"
@@ -52,12 +50,12 @@ const About = () => {
               >
                 <img src={Githublogo} alt="logo" width="100" height="100" />
               </a>
-            </li>
-          </ul>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   );
 };
 
-export default About;
+export default AboutMe;

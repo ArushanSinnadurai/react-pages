@@ -3,7 +3,7 @@ import Githublogo from "./GitHub-logo.svg";
 import resumelogo from "./resume.svg";
 import resume from "./Arushan Sinnadurai resume.pdf";
 
-const Homepage = () => {
+const HomePage = () => {
   return (
     <body>
       <div className="landing-section">
@@ -48,4 +48,4 @@ const Homepage = () => {
   );
 };
 
-export default Homepage;
+export default HomePage;
