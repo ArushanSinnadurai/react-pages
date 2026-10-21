@@ -2,63 +2,153 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-    font-family: 'Assistant', san-serif;
-    font-size: 24px;
-    background-color: #F5F5F5;
-    color: #5A5959;
-    margin: 0px;
-}
-
-/* Add a black background color to the top navigation */
-.navbar {
-    background-color: #F5F5F5;
-    overflow: hidden;
-}
-
-/* Style the links inside the navigation bar */
-.navbar li {
-  float: left;
-  color: black;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
-  list-style-type: none;
-}
-
-/* Change the color of links on hover */
-.navbar li:hover {
-  background-color: #ddd;
-  color: black;
-  list-style-type: none;
-}
-
-/* Add a color to the active/current link */
-.navbar li:active {
-  background-color: #04AA6D;
-  color: white;
-  list-style-type: none;
-}
-.navbar ui {
-    background-color: #04AA6D;
-    color: white;
-    list-style-type: none;
+@layer base {
+  body {
+    @apply bg-dark-primary text-text-secondary font-inter m-0;
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
 
-div.landing-section {
-    width: auto;
-    text-align: center;
-    padding-top: 300px;
-    padding-bottom: 300px;
+  a {
+    @apply transition-colors duration-200;
+  }
+
+  ::selection {
+    @apply bg-accent text-dark-primary;
+  }
 }
 
-ul.links {
-    display:flex;
-    list-style:none;
-    justify-content: center;
-    padding: 0;
+@layer components {
+  .btn-primary {
+    @apply inline-block bg-accent text-dark-primary font-semibold px-8 py-3 rounded-full hover:bg-accent-hover transition-colors duration-200;
+  }
+
+  /* Visible keyboard affordance — the default outline is near-invisible on the dark background. */
+  .focus-ring {
+    @apply outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-dark-primary;
+  }
+
+  /* Nav link with an underline that grows from the left on hover and stays put when active. */
+  .nav-link {
+    @apply focus-ring relative text-xs font-semibold uppercase tracking-[0.2em] transition-colors duration-200;
+  }
+
+  .nav-link::after {
+    content: "";
+    @apply absolute -bottom-1.5 left-0 h-px w-full origin-left scale-x-0 bg-accent transition-transform duration-300;
+  }
+
+  .nav-link:hover::after,
+  .nav-link-active::after {
+    @apply scale-x-100;
+  }
 }
-ul.links li {
-    padding: 10px 10px 0 10px;
+
+/* Scroll reveal, driven by the useInView hook. */
+.reveal {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.reveal-visible {
+  opacity: 1;
+  transform: none;
+}
+
+/*
+ * Pipeline connector. Vertical by default (mobile stacks the stages),
+ * horizontal from the md breakpoint up where the stages sit in a row.
+ * Dots travel using `top`/`left` percentages so the animation fills a
+ * flex-sized track without needing to know its pixel length.
+ */
+.pipeline-connector {
+  position: relative;
+  width: 2px;
+  height: 2.5rem;
+  margin: 0 auto;
+  background: linear-gradient(
+    to bottom,
+    rgba(232, 184, 75, 0.35),
+    rgba(232, 184, 75, 0.08)
+  );
+}
+
+.pipeline-dot {
+  position: absolute;
+  left: 50%;
+  width: 4px;
+  height: 4px;
+  margin-left: -2px;
+  border-radius: 9999px;
+  background-color: #e8b84b;
+  animation: pipeline-flow-y 2.4s linear infinite;
+}
+
+@keyframes pipeline-flow-y {
+  0% {
+    top: 0%;
+    opacity: 0;
+  }
+  15%,
+  85% {
+    opacity: 1;
+  }
+  100% {
+    top: 100%;
+    opacity: 0;
+  }
+}
+
+@keyframes pipeline-flow-x {
+  0% {
+    left: 0%;
+    opacity: 0;
+  }
+  15%,
+  85% {
+    opacity: 1;
+  }
+  100% {
+    left: 100%;
+    opacity: 0;
+  }
+}
+
+@media (min-width: 768px) {
+  .pipeline-connector {
+    width: auto;
+    height: 2px;
+    flex: 1 1 0%;
+    margin: 0 0.5rem;
+    background: linear-gradient(
+      to right,
+      rgba(232, 184, 75, 0.35),
+      rgba(232, 184, 75, 0.08)
+    );
+  }
+
+  .pipeline-dot {
+    top: 50%;
+    left: 0;
+    margin-top: -2px;
+    margin-left: 0;
+    animation-name: pipeline-flow-x;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  .pipeline-dot {
+    animation: none;
+    opacity: 0.5;
+    top: 50%;
+    left: 50%;
+  }
 }
