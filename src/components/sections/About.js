@@ -11,7 +11,7 @@ const About = () => (
           <img
             src={profilepic}
             alt={profile.name}
-            className="relative w-full aspect-square object-cover rounded-2xl"
+            className="relative w-full aspect-[2/3] object-cover object-top rounded-2xl"
           />
         </div>
       </div>
